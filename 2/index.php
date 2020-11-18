@@ -10,9 +10,9 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col">
-                <form action="" method="get" method="GET">
-                    <input type="text" name="search" id="search" value="">
-                    <input type="submit" name="submit" value="ค้นหา">
+                <form class="text-center mb-5" action="" method="get" method="GET">
+                    <input class="w-75" type="text" name="search" id="search" value="">
+                    <input class="btn btn-info" type="submit" name="submit" value="ค้นหา">
                 </form>
             </div>
         </div>
@@ -23,9 +23,6 @@
                 $response = file_get_contents($url);
                 $result = json_decode($response);
                 $target = $_GET['search'];
-
-                echo($target);
-                echo("333333333333333333333");
 
                 echo "<div class='row'>";
                 foreach($result->tracks->items as $info){
